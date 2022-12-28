@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sayerz-nimfinder/static/css/main.e6c13ad2.css",
-    "main.js": "/sayerz-nimfinder/static/js/main.0004e967.js",
+    "main.js": "/sayerz-nimfinder/static/js/main.32194f08.js",
     "static/js/787.9f5692eb.chunk.js": "/sayerz-nimfinder/static/js/787.9f5692eb.chunk.js",
     "index.html": "/sayerz-nimfinder/index.html",
     "main.e6c13ad2.css.map": "/sayerz-nimfinder/static/css/main.e6c13ad2.css.map",
-    "main.0004e967.js.map": "/sayerz-nimfinder/static/js/main.0004e967.js.map",
+    "main.32194f08.js.map": "/sayerz-nimfinder/static/js/main.32194f08.js.map",
     "787.9f5692eb.chunk.js.map": "/sayerz-nimfinder/static/js/787.9f5692eb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.0004e967.js"
+    "static/js/main.32194f08.js"
   ]
 }
