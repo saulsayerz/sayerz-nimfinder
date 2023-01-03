@@ -14,7 +14,7 @@ df = pd.read_excel("public/NIMangkatan21.xlsx")
 
 # MAKE DICT SO SEARCH IS OPTIMIZED
 for i, j in df.iterrows():
-    dict_nim[str(j[2])] = j[0]
+    dict_nim[str(j[2])] = str(j[0])
 
 for item in data :
     if re.findall(pola,item[1]):
