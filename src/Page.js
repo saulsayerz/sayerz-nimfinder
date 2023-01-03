@@ -41,8 +41,7 @@ function swaplowercase(json) {
 
 async function getData() {
     // READ THE JSON FILE TO THE GLOBAL VARIABLES 
-    
-    const res = await fetch('./json/data_13_21.json');
+    const res = await fetch(process.env.PUBLIC_URL + '/json/data_13_21.json');
     const data = await res.json();
     datamhs = data;
     for (var i = 0; i < datamhs.length; i++) {
@@ -50,27 +49,25 @@ async function getData() {
             datamhs[i].push("TPB") // HANDLE YANG NIM NYA CUMAN 2 AJA
         }
     }
-    
-    const res2 = await fetch('./json/kode_fakultas.json');
+    const res2 = await fetch(process.env.PUBLIC_URL + '/json/kode_fakultas.json');
     const data2 = await res2.json();
     kodefakultas = data2;
 
-    const res3 = await fetch('./json/kode_jurusan.json');
+    const res3 = await fetch(process.env.PUBLIC_URL + '/json/kode_jurusan.json');
     const data3 = await res3.json();
     kodejurusan = data3;
     
-    const res4 = await fetch('./json/list_fakultas.json');
+    const res4 = await fetch(process.env.PUBLIC_URL + '/json/list_fakultas.json');
     const data4 = await res4.json();
     listfakultas = data4;
     
-    const res5 = await fetch('./json/list_jurusan.json');
+    const res5 = await fetch(process.env.PUBLIC_URL + '/json/list_jurusan.json');
     const data5 = await res5.json();
     listjurusan = data5;
     
     kodejurusanreversed = swap(kodejurusan);
     kodefakultasreversed = swap(kodefakultas);
-    listjurusanreversed = swaplowercase(listjurusan)
-}
+    listjurusanreversed = swaplowercase(listjurusan)}
 
 
 async function cariMHS(input) {
@@ -191,7 +188,6 @@ async function cariMHS(input) {
             databener.push([datamhs[i][0], datamhs[i][1], datamhs[i][2], namafakultas, singkatanfakultas, namajurusan, singkatanjurusan])
         }
     }
-    console.log(databener)
     return databener
 }
 
@@ -257,9 +253,9 @@ class Page extends Component{
       return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Paper elevation = {6}  sx={{width: '50%', margin: '10px auto', padding: '50px', mt:8}}>
-                <Typography component="h1" variant="h4" sx={{marginBottom: '20px', fontWeight: '700', textShadow: '1px 1px 9px gold', textAlign: 'center'}}>
-                    Sayerz NIM-Finder
+            <Paper elevation = {6}  sx={{width: '70%', margin: '10px auto', maxWidth:'90%', padding: '50px', mt:8}}>
+                <Typography component="h3" variant="h5" sx={{marginBottom: '20px', fontWeight: '700',textShadow: '1px 1px 9px gold', textAlign: 'center'}}>
+                    Sayerz NIM Finder
                 </Typography>
               <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                     <TextField
@@ -270,7 +266,7 @@ class Page extends Component{
                     placeholder='Dapat memasukkan NIM, nama, fakultas, ataupun jurusan!'
                     name="query"
                     autoFocus
-                    sx = {{color: 'red', width: '100%', mr: 2}}
+                    sx = {{color: 'red', width: '100%', mr: 2, minWidth: "130px"}}
                     />
                     <IconButton type ="submit" color="primary" aria-label="search person" sx={{height:'1o0%', outline:1}}>
                         <PersonSearchIcon  fontSize='medium' sx={{strokeWidth: 1}} />
