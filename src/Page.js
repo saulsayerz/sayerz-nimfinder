@@ -41,7 +41,7 @@ function swaplowercase(json) {
 
 async function getData() {
     // READ THE JSON FILE TO THE GLOBAL VARIABLES 
-    const res = await fetch(process.env.PUBLIC_URL + '/json/data_13_21.json');
+    const res = await fetch(process.env.PUBLIC_URL + '/json/data_13_22.json');
     const data = await res.json();
     datamhs = data;
     for (var i = 0; i < datamhs.length; i++) {
